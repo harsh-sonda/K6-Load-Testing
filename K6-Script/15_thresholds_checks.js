@@ -15,7 +15,7 @@ export const options = {
 
 
 export default function(){
-    let response = http.get('https://run.mocky.io/v3/496b69c7-e6b1-4075-9162-b12436e82682')
+    let response = http.get('https://run.mocky.io/v3/23314af7-dfb2-43dd-a558-e0499433f02e')
 
     // checks
     check(response,{

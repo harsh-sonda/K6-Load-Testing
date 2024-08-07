@@ -5,17 +5,17 @@ import k6 from 'k6/http'
 import { sleep } from 'k6'
 
 export const options = {
-    vus: 100,
-    //iterations : 10,
-    //duration: '10s'
+    vus: 5,
+    duration: '10s'
 }
 export default function () {
-    let url = http.get("https://run.mocky.io/v3/79e53045-6355-4ad6-9677-ed7344462e97")
+    let url = http.get("https://run.mocky.io/v3/23314af7-dfb2-43dd-a558-e0499433f02e")
 
-    var maxAttemps = 100
-    for (let retries = 100; retries > 0; retries--) {
+    var maxAttemps = 5
+    for (let retries = maxAttemps; retries > 0; retries--) {
         var numberOfAttemps = maxAttemps - retries + 1
-        if (url.status !== 400) {
+        
+        if (url.status !== 200) {
             retryCounter.add(1)
             console.log(`Response is not correct. Attempt : ${numberOfAttemps} VU : ${__VU} Iteration : ${__ITER}`)
             sleep(1)

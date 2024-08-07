@@ -3,8 +3,8 @@ import { check } from 'k6'
 import { Rate } from 'k6/metrics'
 export let errorRate = new Rate('errors')
 export const options = {
-    vus: 300,
-    duration: '60s',
+    vus: 3,
+    duration: '10s',
     thresholds: {
         errors : ['rate<0.1']
     }

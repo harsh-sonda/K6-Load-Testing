@@ -1,9 +1,4 @@
 /*
-
-https://run.mocky.io/v3/82e5d950-66ae-4197-9c81-c463123fbf42 returns below response
-Parse comple array
-Lets create mock
-Sometimes real world response can be in below format
 {
   "data": [
     {
@@ -68,12 +63,8 @@ Sometimes real world response can be in below format
 import http from 'k6/http'
 
 export default function(){
-    let response = http.get('https://run.mocky.io/v3/bc644c41-7d7d-4653-80f8-3330ea1a0882');
-    // Lets print values - we pare JSON response Body
+    let response = http.get('https://run.mocky.io/v3/c26625ff-d013-454c-a28d-6c2d0c630aeb');
     let body = JSON.parse(response.body)
-
-    // array is on data
-    // so 
 
     body.data.forEach(element => {
         console.log(`value of name from data is ${element.name}`)
@@ -83,10 +74,4 @@ export default function(){
         })
     });
 
-    // Lets print array
-    // array is insdie element
-
-
-    // This is how you can parse complex JSON
-    // It will help you to parse values and return to further or next API calls
 }

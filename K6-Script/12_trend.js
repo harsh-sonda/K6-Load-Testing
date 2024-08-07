@@ -15,7 +15,7 @@ export const options = {
 }
 
 export default function() {
-    let response = http.get('https://run.mocky.io/v3/496b69c7-e6b1-4075-9162-b12436e82682')
+    let response = http.get('https://run.mocky.io/v3/23314af7-dfb2-43dd-a558-e0499433f02e')
     
     let check1 = check(response,{
         'Success! response is 200.' : response => response.status === 200
@@ -25,6 +25,6 @@ export default function() {
     getApiTrend.add(response.timings.duration)
     getApiTrendWaiting.add(response.timings.waiting)
 
-    console.log('Response :'+response.status)
+    console.log('Response : '+response.status)
     // errorRate.add(!check2)
 }

@@ -9,17 +9,16 @@ var retryTrend = new Trend('GET_Api_Max_Entry')
 
 export const options = {
     vus: 2,
-    //iterations : 10,
     duration: '5s'
 }
 export default function () {
-    let url = http.get("https://run.mocky.io/v3/79e53045-6355-4ad6-9677-ed7344462e97")
+    let url = http.get("https://run.mocky.io/v3/23314af7-dfb2-43dd-a558-e0499433f02e")
 
     var maxAttemps = 5
     for (let retries = maxAttemps; retries > 0; retries--) {
         var numberOfAttemps = maxAttemps - retries + 1
         retryTrend.add(numberOfAttemps)
-        if (url.status !== 400) {
+        if (url.status !== 200) {
             retryCounter.add(1)
             console.log(`Response is not correct. Attempt : ${numberOfAttemps} VU : ${__VU} Iteration : ${__ITER}`)
             sleep(1)
