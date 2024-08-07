@@ -6,3 +6,4 @@ export DURATION="10s"
 export INT_TOKEN="585a5e34abe199537fec2640b8252ef7"
 export DEV_TOKEN="adddummytokenhere"
 export PROD_TOKEN-" adddurmytokenhere"
+export ENVIRONMENT = 'int'

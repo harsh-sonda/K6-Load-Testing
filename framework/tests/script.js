@@ -9,10 +9,22 @@ import * as env from '../../env.js'
 export const options = {
     vus: testdata.VUS,
     duration: testdata.DURATION,
+    teardownTimeout: '20s'
 }
 
 // 3 - Test Life Cycle - Init - One time Init
+let environment;
+let token;
 
+    //environment
+    if (`${__ENV.ENVIRONMENT}`== env.int) {
+        environment = env.intEnvironment;
+        token = `${__ENV.INT_TOKEN}`
+    }
+    else if (`${__ENV.ENVIRONMENT}`== env.dev) {
+        environment = env.devEnvironment;
+        token = `${__ENV.DEV_TOKEN}`
+    }
 
 // 4 - Test Life Cycle - Setup
 
