@@ -6,7 +6,6 @@ export const options = {
     vus: 10,
     duration: '20s',
     cloud: {
-        // Project: k6testing
         projectID: 3706456,
         // Test runs with the same name groups test runs together.
         name: 'K6 1st Test'
