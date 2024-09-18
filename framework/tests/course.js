@@ -52,7 +52,7 @@ so lest declare this nside test data
 export let options = {
     vus: testData.VUS, // in case of errros in importing, variables wont be auto populated
     duration: testData.DURATION,
-    teardownTimeout: "20s" // if ther is tear down fucntion, it can go to infinite loop due to isssues or coding error, so here you define max time whthin whihc teardown should work. In case of failures, function will get timeout
+    teardownTimeout: "20s" ,// if ther is tear down fucntion, it can go to infinite loop due to isssues or coding error, so here you define max time whthin whihc teardown should work. In case of failures, function will get timeout
 }
 
 // so this is how we can think of creating framework
