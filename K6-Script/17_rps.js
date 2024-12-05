@@ -2,9 +2,9 @@ import http from 'k6/http'
 import { check } from 'k6'
 
 export const options = {
-    // vus: 5,
-    // duration: '5s',
-    //rps = 5,
+    vus: 5,
+    duration: '5s',
+    rps: 1,
 }
 
 export default function() {
