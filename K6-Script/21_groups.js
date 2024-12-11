@@ -15,7 +15,7 @@ export const options = {
 
 export default function() {
     group('group1', function() {
-    let response = http.get('https://run.mocky.io/v3/11098057-437f-48c7-9981-c34db6053fa6')
+    let response = http.get('https://run.mocky.io/v3/b3cef0d4-6dc9-40d1-8f44-eb7c5e3e6c06')
     console.log(`Response body length ${response.body.length} and Virtual Users : ${__VU}, ITER ${__ITER}`)
     check(response,{
         'Success! response is 200.' : r => r.status === 200,

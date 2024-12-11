@@ -13,8 +13,8 @@ export const options = {
     'http_req_duration{type:GETAPITAG}': ["p(95)<200"],
   },
   cloud: {
-    projectID: 3706456, // Project: k6testing
-    name: "K6 1st Test", // Test runs with the same name group test runs together.
+    projectID: 3706456,
+    name: 'New K6 Testing'
   },
 };
 
